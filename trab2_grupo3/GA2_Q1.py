@@ -1,8 +1,9 @@
 from heap import MaxBinaryHeap
 
-def findKthElement(a: list[int], k: int) -> int or str:
+def findKthElement(a: list[int], k: int) -> int:
   if k not in range(1, len(a)):
-    return 'Sorry!\nKey out of available range :(\nTry again with number between 0 and ' + str(len(a))
+    print('Sorry!\nKey out of available range :(\nTry again with number between 0 and ' + str(len(a)))
+    return -1
 
   maxHeap = MaxBinaryHeap()
   
