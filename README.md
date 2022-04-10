@@ -27,7 +27,7 @@ e as chamadas executadas são:
 
 ### 🎯 Objetivo
 
-Implementar a função `findKthElement(a: list[int], k: int) -> int` que, com um heap binário criado a partir de um array não ordenado retorna o k-ésimo maior elemento da lista, onde:
+Implementar a função `findKthElement(a: list[int], k: int) -> int` que, com um heap binário criado a partir de um array não ordenado, retorna o k-ésimo maior elemento da lista, onde:
 - `a` é um array não ordenado de inteiros
 - `k` é um inteiro que representa o k-ésimo elemento de uma lista `a`
 
