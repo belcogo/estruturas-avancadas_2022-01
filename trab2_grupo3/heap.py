@@ -117,33 +117,3 @@ class MaxBinaryHeap:
       if index == iMax:
         return b + "]"
       b = b + ", "
-
-  # # void
-  # def callPrintTree(self):
-  #   if self.n > 2: 
-  #     self.printTree(2, True, "")
-
-  #   self.stringTree = (str(self.pq[0]) + "\n")
-
-  #   if self.n > 1:
-  #     self.printTree(1, False, "")
-
-  #   return self.stringTree
-
-  # # void
-  # def printTree(self, index, isRight, indent):
-  #   rightChild = index * 2 + 2
-  
-  #   if rightChild < self.n:
-  #     rightIndent = indent + "         " if isRight else " |        "
-  #     self.printTree(rightChild, True, rightIndent)
-    
-  #   self.stringTree = self.stringTree + indent + ("/" if isRight else "\\") + str(self.pq[index]) + "\n"
-  #   leftChild = index * 2 + 1
-    
-  #   if leftChild < self.n:
-  #     leftIndent = indent + " |        " if isRight else "          "
-  #     self.printTree(leftChild, False, leftIndent)
-    
-
-
