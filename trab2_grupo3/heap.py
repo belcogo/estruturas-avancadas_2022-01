@@ -1,4 +1,4 @@
-class BinaryHeap:
+class MaxBinaryHeap:
   stringTree = ""
   # void
   def setInitialConfigs(self):
@@ -9,15 +9,14 @@ class BinaryHeap:
   def __init__(self):
     self.setInitialConfigs()
   
+  # void
   def PQ(self):
     self.clear()
 
-  # returns boolean
-  def isEmpty(self):
+  def isEmpty(self) -> bool:
     return self.n == 0
 
-  # returns int
-  def size(self):
+  def size(self) -> int:
     return self.n
   
   # void
@@ -32,45 +31,39 @@ class BinaryHeap:
     self.pq = temp
 
   # void
-  def bottomUpHeapify(self, i):
+  def bottomUpHeapify(self, i: int):
     parent = int((i - 1) / 2)
-    print(parent)
     if i > 0 and self.compareTo(parent, i):
       self.exchange(i, parent)
       self.bottomUpHeapify(parent)
   
   # void
-  def topDownHeapify(self, i):
-    index = int(i)
-    temp = 2 * index + 1
+  def topDownHeapify(self, i: int):
+    temp = 2 * i + 1
     if (temp + 1) < self.n and self.compareTo(temp, temp + 1):
       temp = temp + 1
-    if temp < self.n and self.compareTo(index, temp): 
-      self.exchange(index, temp)
+    if temp < self.n and self.compareTo(i, temp): 
+      self.exchange(i, temp)
       self.topDownHeapify(temp)
 
   # void
-  def exchange(self, i, j):
-    indexI = int(i)
-    indexJ = int(j)
-    swap = self.pq[indexI]
-    self.pq[indexI] = self.pq[indexJ]
-    self.pq[indexJ] = swap
+  def exchange(self, i: int, j: int):
+    swap = self.pq[i]
+    self.pq[i] = self.pq[j]
+    self.pq[j] = swap
 
-  # returns int
-  def baseCompareTo(self, i, j):
+  def baseCompareTo(self, i, j) -> int:
     if (i is not None and j is None) or i > j: return 1
     if (i is None and j is not None) or i < j: return -1
     return 0
   
-  # returns bool
-  def compareTo(self, i, j):
+  def compareTo(self, i: int, j: int) -> bool:
     I = self.pq[int(i)]
     J = self.pq[int(j)]
-    return self.baseCompareTo(I, J) > 0
+    return self.baseCompareTo(I, J) < 0
 
   # void
-  def increase(self, i, key):
+  def increase(self, i: int, key: int):
     index = int(i)
     if index < 0 or index >= self.n:
       print("Invalid index!")
@@ -81,7 +74,7 @@ class BinaryHeap:
     self.pq[index] = key
 
   # void
-  def decrease(self, i, key):
+  def decrease(self, i: int, key: int):
     index = int(i)
     if index < 0 or index >= self.n:
       print("Invalid index!")
@@ -91,22 +84,20 @@ class BinaryHeap:
       return
     self.pq[index] = key
 
-  # returns int
-  def key(self):
+  def key(self) -> int:
     if self.isEmpty():
       print("Priority queue is empty")
     return self.pq[0]
 
   # void
-  def insert(self, key):
+  def insert(self, key: int):
     if self.n == len(self.pq):
       self.resize()
     self.pq[self.n] = key
     self.bottomUpHeapify(self.n)
     self.n = self.n + 1
 
-  # returns int
-  def extract(self):
+  def extract(self) -> int:
     if self.isEmpty():
       print("Priority queue is empty")
     key = self.pq[0]
@@ -116,8 +107,7 @@ class BinaryHeap:
     self.pq[self.n] = None
     return key
 
-  # returns string
-  def toString(self):
+  def toString(self) -> str:
     iMax = self.n - 1
     if (iMax == - 1): return "[]"
 
