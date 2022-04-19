@@ -24,6 +24,9 @@ e as chamadas executadas são:
   print(findKthElement(a, 3))
   print(findKthElement(a, 6))
 ```
+## 🧪 Executar testes de unidade
+1. Acesse a pasta trab2_grupo3 pelo terminal
+2. Execute o comando `python3 -m unittest unit_test.py` 
 
 ### 🎯 Objetivo
 
