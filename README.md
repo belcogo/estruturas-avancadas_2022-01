@@ -28,7 +28,7 @@ e as chamadas executadas são:
 1. Acesse a pasta trab2_grupo3 pelo terminal
 2. Execute o comando `python3 -m unittest unit_test.py` 
 
-### 🎯 Objetivo
+## 🎯 Objetivo
 
 Implementar a função `findKthElement(a: list[int], k: int) -> int` que, com um heap binário criado a partir de um array não ordenado, retorna o k-ésimo maior elemento da lista, onde:
 - `a` é um array não ordenado de inteiros
@@ -36,19 +36,19 @@ Implementar a função `findKthElement(a: list[int], k: int) -> int` que, com um
 
 **Alunos**
 
-Bel Cogo
+- Bel Cogo
 
-Bruno da Siqueira Hoffmann
+- Bruno da Siqueira Hoffmann
 
-João Vítor Accorsi
+- João Vítor Accorsi
 
 **Professor**
 
-Gilberto Irajá Müller
+- Gilberto Irajá Müller
 
 **Instituição**
 
-Universidade do Vale do Rio dos Sinos (UNISINOS)
+- Universidade do Vale do Rio dos Sinos (UNISINOS)
 
 
 
